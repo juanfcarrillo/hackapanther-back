@@ -2,10 +2,12 @@ import express from 'express';
 import { readFile, writeFile, rm } from 'fs/promises';
 import Mocha from 'mocha';
 import { v4 as uuidv4 } from 'uuid';
+import cors from 'cors'
 
 const app = express();
 
 app.use(express.json());
+app.use(cors())
 
 app.get('/', (_, res) => {
   res.send('Hello World!');
@@ -63,10 +65,9 @@ app.post('/', async (req, res) => {
 
         return res.send(results)
       });
-
   }catch (e) {
     console.log(e)
-    return res.status(500).send('Internal server error')
+    return res.status(400).send('Error dentro del codigo')
   }
 })
 

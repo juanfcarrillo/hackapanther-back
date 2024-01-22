@@ -25,13 +25,12 @@
     "build:watch": "tsc -w -p tsconfig.json",
     "build:release": "npm run clean && tsc -p tsconfig.release.json",
     "lint": "eslint . --ext .ts --ext .mts",
-    "test": "jest --coverage",
-    "prettier": "prettier --config .prettierrc --write .",
-    "test:watch": "jest --watch"
+    "prettier": "prettier --config .prettierrc --write ."
   },
   "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
   "license": "Apache-2.0",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "mocha": "^10.2.0",
     "ts-node": "^10.9.2",

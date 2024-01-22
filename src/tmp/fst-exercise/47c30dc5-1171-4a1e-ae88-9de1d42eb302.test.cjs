@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const twoSum = require("{{exercise_name}}");
+const twoSum = require("./8810f598-23ec-4960-838a-09ace62e3c62.cjs");
 
 describe('twoSum', function() {
     it('should return indices of two numbers that add up to the target', () => {
