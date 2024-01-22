@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "node src/app.js",
-    "clean": "rimraf coverage build tmp",
+    "clean": "rimraf coverage build tmp"
   },
   "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
   "license": "Apache-2.0",
