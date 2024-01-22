@@ -13,6 +13,12 @@ app.get('/', (_, res) => {
   res.send('Hello World!');
 });
 
+const exercises = {
+  "test1": "twoSum([2, 7, 11, 15], 9), [0, 1]",
+  "test2": "twoSum([2, 7, 11, 15], 9), [0, 1]",
+  "test3": "twoSum([3, 2, 4], 6), [1, 2]"
+}
+
 app.post('/', async (req, res) => {
 
   try {
@@ -47,13 +53,13 @@ app.post('/', async (req, res) => {
     mocha.run()
       .on('pass', function (test) {
         results.push({
-          title: test.title,
+          title: exercises[test.title],
           state: 'passed'
         })
       })
       .on('fail', function (test, err) {
         results.push({
-          title: test.title,
+          title: exercises[test.title],
           state: 'failed',
           err: err
         })
