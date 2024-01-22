@@ -18,7 +18,7 @@
     "typescript": "~5.3"
   },
   "scripts": {
-    "start": "node build/src/main.js",
+    "start": "node src/app.js",
     "clean": "rimraf coverage build tmp",
     "prebuild": "npm run lint",
     "build": "tsc -p tsconfig.json",
