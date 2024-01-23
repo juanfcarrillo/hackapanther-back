@@ -7,7 +7,7 @@ describe('twoSum', function() {
         assert.deepEqual(twoSum([2, 7, 11, 15], 9), [0, 1])
     });
 
-    it('test 2', () => {
+    it('test2', () => {
         assert.deepEqual(twoSum([-3, 4, 3, 90], 0), [0, 2]);
     });
 

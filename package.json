@@ -20,7 +20,8 @@
   "scripts": {
     "start": "node src/app.js",
     "clean": "rimraf coverage build tmp",
-    "build": "yarn"
+    "build": "yarn",
+    "dev": "nodemon src/app.js"
   },
   "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
   "license": "Apache-2.0",

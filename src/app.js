@@ -14,12 +14,15 @@ app.get('/', (_, res) => {
 });
 
 const exercises = {
-  "test1": "twoSum([2, 7, 11, 15], 9), [0, 1]",
-  "test2": "twoSum([2, 7, 11, 15], 9), [0, 1]",
-  "test3": "twoSum([3, 2, 4], 6), [1, 2]"
+  "test1": "twoSum([2, 7, 11, 15], 9) result: [0, 1]",
+  "test2": "twoSum([2, 7, 11, 15], 9) result: [0, 1]",
+  "test3": "twoSum([3, 2, 4], 6) result: [1, 2]"
 }
 
 app.post('/', async (req, res) => {
+
+  let tempFileName
+  let testFileName
 
   try {
     const code = req.body.code;
@@ -30,7 +33,7 @@ app.post('/', async (req, res) => {
 
     // generate random file name
     const randomName = uuidv4()
-    const tempFileName = `src/tmp/fst-exercise/${randomName}.cjs`
+    tempFileName = `src/tmp/fst-exercise/${randomName}.cjs`
     await writeFile(
       tempFileName,
       `${code}
@@ -39,7 +42,7 @@ app.post('/', async (req, res) => {
       'utf8'
     )
 
-    const testFileName = `src/tmp/fst-exercise/${uuidv4()}.test.cjs`
+    testFileName = `src/tmp/fst-exercise/${uuidv4()}.test.cjs`
     await writeFile(
       testFileName,
       testTempleateFile.replace('{{exercise_name}}', `./${randomName}.cjs`),
